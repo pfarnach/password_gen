@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Password Generator</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="fog.ico">
+	
+	<script src="script.js"></script>
+
+	<!-- background image from Unsplash.com -->
+</head>
+<body>
+	<div class="content">
+		<div class="banner">
+			<h1>password generator</h1>
+		</div>
+		<br><br>
+		<hr><hr>
+		<form>
+			<fieldset>
+				<div class="strength_selector">
+					<label for="pw_strength" accesskey="p" id="pw_strength_label">Select password strength</label>
+					<select name="pw_strength" id="pw_strength">
+						<option value="pw_weak">Weak</option>
+						<option value="pw_normal" selected>Normal</option>
+						<option value="pw_strong">Strong</option>
+						<option value="pw_xstrong">Crazy strong</option>
+					</select>
+					<label for="btn-generate"></label>
+					<input type="button" id="btn-generate" value="generate" onclick="makePW()">
+				</div>
+				<div class="output_box">
+					<output for="btn-generate" id="password">Click the button above</output>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<footer>
+		&copy2014 >>> <a href="http://www.patfarnach.com" target="_blank">Pat Farnach</a><a href="https://twitter.com/PFarnach" target="_blank"><img src="twitter.svg" alt="twitter"></a>
+	</footer>
+</body>
+</html>

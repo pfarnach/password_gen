@@ -1,0 +1,289 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ---------------------------
+HTML and Body
+-----------------------------*/
+
+html {
+	height: 100%;
+}
+
+/* sets main font and background image */
+
+body {
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	background-image:url('fog-op.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+
+
+/* ---------------------------
+Main container div
+-----------------------------*/
+
+/* contains everything except footer */
+
+div.content {
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+	top: 4em;
+	text-align: center;
+}
+
+/* title */
+
+div.content div.banner {
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+	margin: 0 auto;
+	border-radius: 7px;
+}
+
+/* title text */
+
+div.content h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 4em;
+	color:white;
+	margin: 0 auto;
+	padding: .4em .2em;
+	display:inline-block;
+}
+
+/* stylish divider lines */
+
+hr {
+	width: 60%;
+	border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: rgba(0,0,0,0.7);; /* old IE */
+    background-color: rgba(0,0,0,0.7) /* Modern Browsers */
+}
+
+hr:first-of-type {
+	width: 75%;
+}
+
+/* dropdown, button, and output box */
+
+fieldset {
+	margin-top:3.5em;
+}
+
+/* dropdown only */
+
+select[name="pw_strength"] {
+	margin-left: 10px;
+	display:block;
+	font-size: 1em;
+	margin: 10px auto;
+	color: white;
+	background-color: rgba(0,0,0,0.6);
+	cursor:pointer;
+	border: none;
+    outline:none;
+}
+
+/* box around dropdown and button only */
+
+.strength_selector {
+	width: 55%;
+	padding: 0.8em;
+	margin: 0 auto;
+	background-color: rgba(70,150,150,0.1);
+	border: 3px solid rgba(70,150,150,0.7);
+	border-radius: 6px;
+}
+
+/* button */
+
+form #btn-generate {
+	display:block;
+	font-size: 1.5em;
+	margin: 2.2em auto .5em;
+	padding: .8em 1.4em;
+	color: white;
+	background-color: rgba(0,0,0,0.6);
+	cursor:pointer;
+	border-radius: 7px;
+	border: none;
+    outline:none;
+	transition: background-color .25s ease;
+}
+
+/* button hover */
+
+form #btn-generate:hover {
+	background-color: rgba(0,0,0,0.7);
+}
+
+/* button active */
+
+form #btn-generate:active {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+/* output box container */
+
+.output_box {
+	margin-top: 5em;
+}
+
+/* output box */
+
+form #password {
+	background-color: rgba(70,150,150,0.7);
+	font-size: 2em;
+	padding: 0.5em;
+	border-radius: 9px;
+ 	transition: background-color .3s ease, padding .5s cubic-bezier(0.840, -0.600, 0.225, 1.650) .2s;
+}
+
+/* output box hover */
+
+form #password:hover {
+	background-color: rgba(70,150,150,1);
+	padding: 0.9em;
+}
+
+
+
+/* ---------------------------
+Footer
+-----------------------------*/
+
+/* footer container */
+
+footer {
+	float: right;
+	font-size: .85em;
+	background-color: rgba(70,150,150,0.4);
+	padding: 5px 10px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	border-radius: 8px 0px 0px 0px;
+	transition: all .4s ease;
+}
+
+/* footer hover state */
+
+footer:hover {
+	background-color: rgba(70,150,150,1);
+	padding: 15px 30px;
+	border-radius: 8px 0px 0px 0px;
+}
+
+/* footer link in my name */
+
+footer a {
+	text-decoration: none;
+	color: black;
+}
+
+footer a img {
+	width: 17px;
+	height: auto;
+	margin: 0 8px;
+	transition: -webkit-transform .5s ease;
+	transition: transform .5s ease;
+}
+
+footer a img:hover { /* IE 9 */
+    -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+     transform: rotateY(180deg);
+}
+
+
+/* ---------------------------
+Media queries
+-----------------------------*/
+
+@media screen and (max-width: 748px) {
+
+	hr, br {
+		display: none;
+	} /* makes style lines disappear */
+
+	div.content {
+		width: 100%;
+		top: 2em;
+	} /* makes title box full width and bumps it up closer to top */
+
+	div.content div.banner {
+		border-radius: 0;
+	} /* gets rid of rounded corners once full width */
+
+	div.content h1 {
+	    width: 70%;
+	} 
+
+	form #password {
+		width: 80%;
+	} /* makes sure passwords fit */
+}
+
+@media screen and (max-width: 480px) {
+	
+	form #password {
+		font-size: 1.6em;
+		background-color: rgba(70,150,150,1);
+		padding: 0.9em;
+		transition: none;
+	}
+}
+
+
